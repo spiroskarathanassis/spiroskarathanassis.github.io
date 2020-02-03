@@ -73,7 +73,6 @@ body {
     padding: 12px;
 }
 .menu-modal {
-    display: none;
     width: 100%;
     background: rgba(0, 0, 0, 0.4);
     height: 100%;
