@@ -121,5 +121,6 @@ textarea {
 	font-weight: normal;
 }
 .sendButton:hover {
-	background-color: #AA5151;
+	background-color: #D07878;
+/*	background-color: #AA5151; */
 }
