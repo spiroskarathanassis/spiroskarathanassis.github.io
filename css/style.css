@@ -145,7 +145,7 @@ button:disabled {
     border-radius: 50%;
     width: 100%;
     height: 100%;
-    position: fixed;
+    position: absolute;
     animation: spinoffPulse 20s infinite linear;
 }
 .contain-circle {
@@ -154,7 +154,7 @@ button:disabled {
     left: 60vw;
     width: 25em;
     height: 25em;
-    position: absolute;
+    position: fixed;
     transform: rotateY(66deg);
 }
 @keyframes spinoffPulse {
