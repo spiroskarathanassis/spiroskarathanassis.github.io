@@ -154,7 +154,7 @@ button:disabled {
     left: 60vw;
     width: 25em;
     height: 25em;
-    position: fixed;
+    position: absolute;
     transform: rotateY(66deg);
 }
 @keyframes spinoffPulse {
