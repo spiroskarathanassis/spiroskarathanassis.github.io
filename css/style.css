@@ -118,3 +118,52 @@ button:disabled {
 	background-color: #beaae480;
 	color: black;
 }
+.lan {
+	font-family: sans-serif;
+	font-weight: bold;
+  	animation: spinoffPulse1 20s infinite linear;
+ 	position: absolute;
+}
+.js {
+  top: 50%;
+  left: 0;
+}
+.java {
+  top: 100%;
+  left: 50%;
+}
+.html {
+  top: 50%;
+  left: 100%;
+}
+.css {
+  top: 0;
+  left: 50%;
+}
+.circle {
+  	border-radius: 50%;
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    animation: spinoffPulse 20s infinite linear;
+}
+.contain-circle {
+	border-radius: 50%;
+    top: 17%;
+    right: 5%;
+    width: 26em;
+    height: 23em;
+    position: absolute;
+    transform: rotateX(350deg) rotateY(63deg);
+}
+@keyframes spinoffPulse {
+    0% { transform:rotate(0deg); }
+    100% { transform:rotate(360deg); }
+}
+@keyframes spinoffPulse1 {
+    0% { transform:rotate(360deg); }
+    100% { transform:rotate(0deg); }
+}
+.circle:hover {
+  animation-play-state: paused;
+}
