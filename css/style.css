@@ -13,7 +13,7 @@ body {
     font-weight: bold;
     padding: 0px 8px;
 }
-#bg {
+.bg {
 	border: 1px solid black;
 	position: absolute;
   	top: -50%;
@@ -96,8 +96,8 @@ body {
     margin: 10px 3px;
 } 
 .ham-menu, .ham-menu::before, .ham-menu::after { 
-	width: 32px;
-    height: 8px;
+	width: 20px;
+    height: 4px;
     border-radius: 5px;
     background-color: black;
 }
