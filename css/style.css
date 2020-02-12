@@ -120,12 +120,6 @@ button:disabled {
 	background-color: #beaae480;
 	color: black;
 }
-.lan {
-	font-family: sans-serif;
-	font-weight: bold;
-  	animation: spinoffPulse1 20s infinite linear;
- 	position: absolute;
-}
 .show {
 	display: block;
 }
