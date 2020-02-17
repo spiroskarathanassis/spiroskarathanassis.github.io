@@ -67,7 +67,7 @@ body {
 	position: absolute;
 	top: 0;
 	right: 0;
-    width: 8em;
+    width: min-content;
     float: right;
 }
 .menu-Button {
