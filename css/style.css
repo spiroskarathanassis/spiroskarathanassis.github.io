@@ -11,7 +11,6 @@ body {
     font-family: Arial;
     font-size: 1rem;
     font-weight: bold;
-    padding: 0px 8px;
 }
 .bg {
 	border: 1px solid black;
@@ -36,25 +35,25 @@ body {
 	display: block;
     position: absolute;
     width: 100%;
-    bottom: 21vh;
-    margin-left: -8px;
+    bottom: 24vh;
     text-align: -webkit-center;
 }
 .caption-title {
-	border-width: 0;
-    border-top-width: 2px;
-    border-bottom-width: 2px;
+	position: relative;
+    width: 32em;
+    border-width: 2px;
+    border-radius: 12px;
     border-style: solid;
     border-color: #fcc2c2ba;
     font-family: Arial, sans-serif;
     font-size: 12px;
-    padding: 4px 72px;
+    padding: 4px 12px;
     text-align: center;
     color: white;
-    background-color: rgba(0, 0, 0, 0.21);
+    background-color: rgba(0, 0, 0, 0.77);
 }
 .title1 {
-	font: 3em Arial, sans-serif;
+	font: 2.5em Arial;
     line-height: 1.6em;
     margin: 0;
 }
@@ -78,6 +77,7 @@ body {
 .menu-modal {
 	display: none;
     position: relative;
+    margin-right: 14px;
     overflow: auto;
     min-width: 120px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
