@@ -1,87 +1,197 @@
+<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8">
 	<title>S. Karathanassis</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/hireModal.css">
-	
-	
+	<link rel="stylesheet" type="text/css" href="main-style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script type="text/javascript" src="js/mybootstrap.js"></script>
 </head>
 <body>
-	<div class="bg">
-	 	<img class="bg-img" src="docs/bg.png" alt="">
-	</div>
-	
-	<div class="caption">
-		<div class="caption-title">
-			<a class="title1">Hi, I'm Spiros Karathanassis</a>
-			<a class="title2">Back-end / Web Developer</a>
-		</div>
-	</div>
-	<div class="menu-container" id="menuContainer">
-        <div class="menu-Button btn" id='menuButton' >
-            <span class="ham-menu"></span>
-        </div>
-        <div class="menu-modal" id="menuBoxes">
-            <button class="box" onclick="window.open('docs/Spiros Karathanassis CV.pdf')">
-            	<span class="bio">Resume</span>
-            </button>
-            <button class="box" disabled>
-            	<span class="portofolio">Portofolio</span>
-            </button>
-            <button class="box" onclick="window.open('quiz/quizGame.html')">
-            	<span class="games">Quiz game</span>
-            </button>
-            <button class="box" data-toggle="modal" data-target="#modalForm">
-				<span class="hireMe">Hire me</span>
-			</button>
-        </div>
-	</div>
-	
-	<div class="modal" id="modalForm" role="email" style="display: none;" aria-hidden="false">
-		<div class="modal-email">
-			<div class="modal-content">
-			
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">
-						<span aria-hidden="true">❎</span>
-					</button>
-					<h3 class="modal-title" id="myModalLabel">Hire Form</h3>						
-				</div>
-				
-				<div class="modal-body">
-					<form role="form">
-						<div>
-							<input type="text" class="form-body" id="inputName" placeholder="Full name" required>
-						</div>
-						<div>
-							<input type="text" class="form-body" id="inputEmail" placeholder="Email" required>
-						</div>
-						<div>
-							<input type="text" class="form-body" id="inputWebsite" placeholder="Website">
-						</div>
-						<div>
-							<input type="text" class="form-body" id="inputPosition" placeholder="Position" required>
-						</div>
-						<div class="textMessage">
-						<span>Message</span>
-							<textarea class="form-body" id="inputMessage" placeholder="Enter a cover letter(20 letters)" rows="3" required></textarea>
-						</div>
-						<p class="statusMsg"></p>
-					</form>
-				</div>
-				
-				<div class="modal-footer">
-					<button type="button" class="sendButton" onclick="submitHireForm()">SEND</button>
-				</div>
-				
+	<section class="main-page">
+		<div class="line-up">
+			<div class="box bio-box">
+				<a class="bio" href="#bio">Bio</a>
+			</div>
+			<div class="box portofolio-box">
+				<a class="portofolio" href="#portofolio">Portofolio</a>
 			</div>
 		</div>
-	</div>
-	
-	<script type="text/javascript" src="js/menuContent.js"></script>
-	<script type="text/javascript" src="js/hireModal.js"></script>
+		<div class="line-down">
+			<div class="box contact-box">
+				<a class="contact" data-toggle="modal" data-target="#modalInfo">Contact Me</a>
+			</div>
+			<div class="box skills-box">
+				<a class="skills" href="#skills">Skills</a>
+			</div>
+		</div>
+		<div class="title-container">
+			<div class="title">Hi, I am Spiros Karathanassis</div>
+			<div class="sub-title">Back-end / Web Developer</div>
+			<div class="location-container">
+				<img src="docs/images/worldwide.png" alt="">
+				<a class="location">Patras, Greece</a>
+			</div>
+		</div>
+		<div class="social-media">
+			<div class="social facebook" onclick="window.open('https://www.facebook.com/spiros.karathanassis')">
+				<img src="docs/social-icons/fb.png" alt="">
+			</div>
+			<div class="social github" onclick="window.open('https://github.com/spiroskarathanassis')">
+				<img src="docs/social-icons/github.png" alt="">
+			</div>
+			<div class="social linkedIn" onclick="window.open('https://www.linkedin.com/in/spiroskarathanassis')">
+				<img src="docs/social-icons/linkedIn.png" alt="">
+			</div>
+		</div>
+	</section>
+	<section class="bio-page" id="bio">
+		<div class="bio-circle circle">
+			<div class="circle-text">Bio</div>
+		</div>
+		<div class="notes-container">
+			<div class="notes-header">
+				<div class="mini-bio">Mini Bio</div>
+				<p class="notes-title">Spiros Karathanassis</p>
+			</div>	
+			<div class="notes-text">
+				<p>
+					I was born on a sunny spring day in May '95 in Patras, Greece 
+					and I still live here. I have two awesome siblings George and 
+					Marilyda and also 2 great parents. I am a self-motivated person 
+					who likes to set targets and get things done, regardless of 
+					difficulties and obstacles.
+				</p>
+				<p>
+					I am a full-time student, motivated by my love for learning 
+					and succeeding and I strive to become an outstanding and 
+					successful human in today’s society. Through my passion for 
+					fitness, I got involved with many different (individual and team) 
+					sports, one of which was triathlon. Through very rigorous daily 
+					commitment and preparation, I was able to win lots of medals 
+					through the years which only made my passion even bigger.
+				</p>
+				<p>
+					Another passion of mine is configuring and developing new 
+					software technologies. As a University of Patras graduate 
+					with a MSc in Computer Engineering and Informatics, I now 
+					possess several skills that can allow me to evolve into a 
+					brilliant software engineer and be involved in great projects.
+				</p>
+				<p>
+					The ideal environment for me to work would be creative, dynamic
+					 and with high standards. Feel free to download my resume below 
+					 and do not hesitate to get in touch.
+				</p>
+			</div>
+			<div class="resume" onclick="window.open('docs/Spiros Karathanassis CV.pdf')">
+				Resume <img src="docs/images/download.png" alt="">
+			</div>
+		</div>
+	</section>
+	<section class="portofolio-page" id="portofolio">
+		<div class="portofolio-circle circle">
+			<a class="circle-text">Portofolio</a>
+		</div>
+		<div class="projects-container">
+			<table>
+				<thead>
+					<tr>
+						<th>Projects</th>
+						<th class="t-hide">Languages / Techniques</th>
+						<th class="t-hide">Link</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="projects t-hide">Football Game</td>
+						<td class="languages t-hide">Java</td>
+						<td class="link t-hide">Git: #FootballGame</td>
+					</tr>
+					<tr>
+						<td class="projects">Delivery Web App</td>
+						<td class="languages t-hide">PHP, JS, AJAX</td>
+						<td class="link t-hide"></td>
+					</tr>
+					<tr>
+						<td class="projects">Quiz Game</td>
+						<td class="languages t-hide">PHP, JS, jQuery, JSON</td>
+						<td class="link quiz-link t-hide" onclick="window.open('quiz/quizGame.html')">
+							<a>Git: #quizGame </a>
+							<a>Play: <i>Click Me</i></a>
+						</td>
+					</tr>
+					<tr>
+						<td class="projects">Tic-Tac-Toe</td>
+						<td class="languages t-hide">Java</td>
+						<td class="link t-hide">Git: #TicTacToe</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="portofolio-media">
+			<div class="portofolio-git">
+				<div class="social github" onclick="window.open('https://github.com/spiroskarathanassis')">
+					<img src="docs/social-icons/github.png" alt="">
+				</div>
+				<a>Github</a>
+			</div>
+			<div class="portofolio-stack">
+				<div class="social stackOverflow" onclick="window.open('https://stackoverflow.com/users/12406153/sk-keysolver')">
+					<img src="docs/social-icons/stackOverflow.png" alt="">
+				</div>
+				<a>Stack Overflow</a>
+			</div>
+		</div>
+	</section>
+	<section class="skills-page" id="skills">
+		<div class="skills-circle circle">
+			<a class="circle-text">Skills</a>
+		</div>
+		<div class="world-container">
+			<img src="docs/images/globe.png" alt="">
+			<div class="contain-ring">
+				<div class="ring">
+				    <div class="css lan">CSS</div>
+				    <div class="js lan">Javasript</div>
+				    <div class="java lan">Java</div>
+				    <div class="html lan">HTML</div>
+				</div>
+			</div>
+		</div>
+		<div class="skills-container">
+			<div class="skills-dynamic">
+				<ul class="skills-text">
+					<li>Problem Solving</li>
+					<li>Critical Thinker</li>
+				</ul>
+			</div>
+			<div class="skills-soft">
+				<ul class="skills-text">
+					<li>Agile</li>
+					<li>Socialized</li>
+					<li>Team Player</li>
+					<li>Communicative</li>
+					<li>Self-motivated</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<section class="modal" id="modalInfo" style="display: none; "aria-hidden="false">
+		<div class="modal-email">
+			<div class="modal-content">
+				<button type="button" class="close" data-dismiss="modal">
+					<span aria-hidden="true">X</span>
+				</button>
+				<div class="modal-body">
+					<div class="modal-info">Email: <a>karathanassis13 @ gmail (.) com</a></div>
+					<div class="modal-info">Skype: <a>spiroskarathanassis</a></div>
+					<div class="modal-info">Mobile: <a>+30 6979951071</a></div>
+				</div>
+				<div class="modal-footer">Get in touch</div>
+			</div>
+		</div>
+	</section>
+	<script type="text/javascript" src="js/ain.js"></script>
 </body>
 </html>
