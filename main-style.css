@@ -128,7 +128,7 @@ section::after {
 	margin-top: 2px;
 }
 .social-media {
-	position: absolute;
+	position: fixed;
     top: calc(50% - 136px/2);
     right: 3%;
     width: 48px;
@@ -174,9 +174,10 @@ section::after {
 	/*----------- Bio Page -----------*/
 .notes-container {
 	position: absolute;
-    top: calc(50% - 300px);
+    top: calc(40% - 150px);
     left: calc(50% - 300px);
     width: 600px;
+    height: calc(20% + 300px);
     max-height: 600px;
     background-image: url('docs/images/wood.jpg');
     background-size: 120%;
@@ -202,10 +203,11 @@ section::after {
     position: relative;
     background: #f3d8d8a3;
     width: fit-content;
+    height: calc(100% - 120px);
     max-height: 600px;
     overflow: auto;
     padding: 0 12px;
-   border-radius: 24px 5px 5px 5px;
+	border-radius: 24px 5px 5px 5px;
 }
 .notes-text p {
 	color: black;
@@ -238,7 +240,7 @@ section::after {
 .projects-container {
 	position: absolute;
     left: calc(50% - (600px + 6vw)/2);
-    top: calc(50% - 228px - 50px);
+	top: calc(50% - 228px/2 - 30px);
 }
 table {
 	-webkit-border-horizontal-spacing: 2vw;
@@ -284,7 +286,7 @@ td {
 .portofolio-media {
 	position: absolute;
     width: 360px;
-    top: calc(50% + 50px);
+	top: calc(50% + 228px/2);
     left: calc(50% - 180px + 20px);
 }
 .portofolio-git,
@@ -500,6 +502,7 @@ td {
 		font-size: 16px;
 	}
 	.social-media {
+		position: absolute;
 	    right: 0;
 	    margin-right: -8px;
 	}
@@ -521,8 +524,6 @@ td {
 	    top: 75px;
 	    left: 0;
 	    margin: 0 10px;
-        overflow: auto;
-	    height: calc(100% - 120px);
 	}
 	.resume {
 		position: absolute;
@@ -556,7 +557,7 @@ td {
 	    left: unset;
 	}
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 900px), (max-height: 600px) {
 	.world-container {
 		top: calc(50% - 100px);
 	    left: calc(50% - 50px);
