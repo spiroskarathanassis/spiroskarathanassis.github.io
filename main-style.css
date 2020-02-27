@@ -237,7 +237,7 @@ section::after {
 	/*----------- Portofolio Page -----------*/
 .projects-container {
 	position: absolute;
-    left: calc(50% + 20px - (600px + 6vw)/2);
+    left: calc(50% - (600px + 6vw)/2);
     top: calc(50% - 228px - 50px);
 }
 table {
@@ -530,6 +530,9 @@ td {
 	    right: 0;
 	    float: none;
     }
+    .projects-container {
+		top: 100px;
+    }
 }
 @media screen and (max-width: 600px) {
 	.projects-container {
@@ -553,7 +556,7 @@ td {
 	    left: unset;
 	}
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
 	.world-container {
 		top: calc(50% - 100px);
 	    left: calc(50% - 50px);
