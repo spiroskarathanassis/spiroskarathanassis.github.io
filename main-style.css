@@ -419,7 +419,7 @@ td {
 }
 .modal-email {
  	position: relative;
-    top: calc(50% - 190px);
+    top: calc(50% - 215px);
     margin: 30px auto;
     width: 380px;
 }
