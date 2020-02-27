@@ -473,7 +473,7 @@ td {
     padding: 1em;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
 	.line-up {
 	    top: calc(50% - 75px - 100px);
 	}
@@ -530,7 +530,9 @@ td {
 	    right: 0;
 	    float: none;
     }
-    .projects-container {
+}
+@media screen and (max-width: 600px) {
+	.projects-container {
     	left: calc(50% - 214px/2);
 		top: calc(50% - 168px/2 - 50px);
     }
