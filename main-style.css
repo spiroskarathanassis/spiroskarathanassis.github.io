@@ -508,11 +508,12 @@ td {
     	left: calc(50% - 50px);
     }
 	.notes-container {
-	    position: absolute;
-	    top: calc(50% - 225px + 50px);
-	    left: calc(50% - 165px);
-	    width: 330px;
-	    height: 450px;
+        position: absolute;
+	    top: 125px;
+	    left: 0;
+	    width: 100%;
+	    height: calc(100% - 150px);
+	    max-height: 450px;
 	}
 	.notes-text {
 		position: absolute;
@@ -520,6 +521,8 @@ td {
 	    top: 75px;
 	    left: 0;
 	    margin: 0 10px;
+        overflow: auto;
+	    height: calc(100% - 120px);
 	}
 	.resume {
 		position: absolute;
