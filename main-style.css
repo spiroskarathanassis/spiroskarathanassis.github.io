@@ -29,7 +29,7 @@ section::after {
 }
 .main-page,
 .bio-page,
-.portofolio-page,
+.portfolio-page,
 .skills-page,
 .contact-info {
 	height: 100vh;
@@ -58,7 +58,7 @@ section::after {
 	position: relative;
     float: left;
 }
-.portofolio-box,
+.portfolio-box,
 .skills-box {
 	position: relative;
     float: right;
@@ -166,7 +166,7 @@ section::after {
     background-color: #70D6DE;
 }
 .bio-circle,
-.portofolio-circle,
+.portfolio-circle,
 .skills-circle {
 	top: calc(50% - 50px);
 }
@@ -236,7 +236,7 @@ section::after {
 	background: rgba(112, 214, 222);
 }
 
-	/*----------- Portofolio Page -----------*/
+	/*----------- Portfolio Page -----------*/
 .projects-container {
 	position: absolute;
     left: calc(50% - (600px + 6vw)/2);
@@ -283,30 +283,30 @@ td {
 	cursor: pointer;
 	color: white;
 }
-.portofolio-media {
+.portfolio-media {
 	position: absolute;
     width: 360px;
 	top: calc(50% + 228px/2);
     left: calc(50% - 180px + 20px);
 }
-.portofolio-git,
-.portofolio-stack {
+.portfolio-git,
+.portfolio-stack {
 	position: relative;
 	display: block;
     width: 180px;
     text-align: center;
 }
-.portofolio-git {
+.portfolio-git {
 	float: left;
     text-align: right;
     right: 50px;
 }
-.portofolio-stack {
+.portfolio-stack {
 	float: right;
     text-align: left;
     left: 50px;
 }
-.portofolio-media a {
+.portfolio-media a {
 	display: inline-block;
 	color: white;
 	line-height: 48px;
@@ -543,15 +543,15 @@ td {
     .t-hide {
     	display: none;
     }
-    .portofolio-media {
+    .portfolio-media {
 	    width: auto;
 	    left: calc(50% - 180px/2);
 	}
-	.portofolio-git {
+	.portfolio-git {
 	    text-align: left;
 	    right: unset;
 	}
-	.portofolio-stack {
+	.portfolio-stack {
 	    float: left;
 	    text-align: left;
 	    left: unset;
