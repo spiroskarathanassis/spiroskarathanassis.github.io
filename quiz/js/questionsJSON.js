@@ -152,7 +152,7 @@ const questionQuiz = {
 			{
 				"q_id": 8,
 				"title": "Which of the following Elite Men were on the podium in ITU WTS 2019 rankings?",
-				"img": "C:/Users/spiroscalvin/eclipse-workspace/BasicProgramming/Quiz/WebContent/questionImages/question08.JPG",
+				"img": "./questionImages/question08.JPG",
 				"question_type": "mutiplechoice-multiple",
 				"possible_answers": [
 					{
