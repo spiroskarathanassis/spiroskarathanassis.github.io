@@ -317,6 +317,7 @@ td {
 	position: absolute;
     top: calc(50% - 250px);
     left: calc(50% - 100px);
+    transform-style: preserve-3d;
 }
 .world-container img {
 	width: 200px;
