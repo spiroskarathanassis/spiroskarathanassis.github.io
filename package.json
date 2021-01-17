@@ -1,0 +1,6 @@
+{
+  "scripts": {
+    "start": "cd apps/website && yarn serve",
+    "build": "cd apps/website && yarn build"
+  }
+}
