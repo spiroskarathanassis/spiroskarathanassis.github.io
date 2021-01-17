@@ -8,7 +8,7 @@
       <h1>If you search for great developers I am your choice</h1>
       <h2>Front-End Developer / Software Engineer</h2>
       <div class="location-container">
-        <img src="../../assets/worldwide.png" alt="location" />
+        <img src="../../assets/images/worldwide.png" alt="location" />
         <a href="https://www.google.com/maps/place/Patras">Patras, Greece</a>
       </div>
       <details>
@@ -37,7 +37,7 @@ export default {
   
   header
     position: absolute
-    background: linear-gradient(to top, rgba(69, 58, 12, 0.7) 20%, transparent), url('../../assets/background.jpeg') left 10% bottom 30%/cover border-box
+    background: linear-gradient(to top, rgba(69, 58, 12, 0.7) 20%, transparent), url('../../assets/images/background.jpeg') left 10% bottom 30%/cover border-box
     top: 0
     width: 100vw
     height: 35%

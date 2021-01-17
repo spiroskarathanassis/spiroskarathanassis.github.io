@@ -77,5 +77,8 @@ export default {
 
           &:hover
             background: rgba(49, 46, 46, 0.88)
+          
+          &.router-link-active
+            background: rgb(151, 147, 147)
 
 </style>

@@ -22,7 +22,8 @@ export default {
     font-family: 'Noto Sans JP', sans-serif;
   }
   section {
-    position: absolute;
+    display: grid;
+    grid-auto-columns: auto;
     background-color: rgba(29, 18, 18, 0.96);
     width: 100vw;
     height: 100vh;
