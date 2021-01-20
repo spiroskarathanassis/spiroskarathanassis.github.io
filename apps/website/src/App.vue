@@ -23,7 +23,7 @@ export default {
   }
   section {
     display: grid;
-    grid-auto-columns: auto;
+    grid-template-rows: 1fr 3fr;
     background-color: rgba(29, 18, 18, 0.96);
     width: 100vw;
     height: 100vh;
