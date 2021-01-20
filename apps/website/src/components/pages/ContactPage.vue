@@ -3,17 +3,18 @@
     <navigation-buttons isPage="contact" />
     <div class="main-container">
       <div class="contact-boxes" ref="contactBoxes">
-        <div v-for="box in offerBoxes" :key="box.id" :id="box.id"
+        <div v-for="(box, index) in offerBoxes" :key="box.id" :id="box.id"
           class="offer-box"
           @touchstart="startTouch"
           @touchmove="moveTouch"
-          @touchend="endTOuch" >
+          @touchend="endTOuch"
+          @click="toggleBox(index)">
           <div><h2>{{ box.title }}</h2></div>
           <p>{{ box.text }}</p>
         </div>
       </div>
 
-      <contact-form></contact-form>
+      <contact-form :boxName="boxContact"></contact-form>
     </div>
   </section>
 </template>
@@ -23,7 +24,7 @@ import { ref } from 'vue';
 import ContactForm from '../ContactForm.vue';
 import NavigationButtons from '../NavigationButtons.vue';
 import { boxes } from '../constants';
-
+import detectMobile from '../utils/detectMobile';
 
 export default {
   name: 'ContactPage',
@@ -32,6 +33,7 @@ export default {
     const offerBoxes = ref(boxes);
     const contactBoxes = ref(null);
     const isTouchable = ref(false);
+    const boxContact = ref(null);
     let startTouchX, startTouchY;
 
     // Touch events for carousel mobile version
@@ -68,19 +70,23 @@ export default {
       if (!isTouchable.value) return;
 
       const lastPointX = Math.floor(e.changedTouches[0].clientX);
+      shiftBoxes(Math.floor(lastPointX - startTouchX) > 0);
+      resetBoxStyles();
+      setBoxContact();
+      isTouchable.value = false;
+    }
+
+    // left or right move
+    const shiftBoxes = (isLeftMove = false) => {
       let removedElement;
 
-      // left or right move
-      if (Math.floor(lastPointX - startTouchX) > 0) {
+      if (isLeftMove) {
         removedElement = offerBoxes.value.pop();
         offerBoxes.value.unshift(removedElement);
       } else {
         removedElement = offerBoxes.value.shift(removedElement);
         offerBoxes.value.push(removedElement);
       }
-
-      resetBoxStyles();
-      isTouchable.value = false;
     }
 
     const resetBoxStyles = () => {
@@ -89,9 +95,23 @@ export default {
         box.style = "";
     }
 
+    const toggleBox = (boxIndex) => {
+      // if mobile keep touch event instead of click
+      if (boxIndex === 1 || detectMobile()) return;
+      shiftBoxes(boxIndex < 1);
+      setBoxContact();
+    }
+
+    const setBoxContact = () => {
+      console.log(offerBoxes.value[1].id);
+      boxContact.value = offerBoxes.value[1].id;
+    }
+
     return {
       offerBoxes,
       contactBoxes,
+      toggleBox,
+      boxContact,
       startTouch, moveTouch, endTOuch
     }
   }
@@ -125,10 +145,13 @@ export default {
     width: 140px;
     height: 200px;
     margin: 0.5rem;
+    cursor: pointer;
     box-shadow: 0 0 12px 2px rgba(29, 18, 18, 0.96);
+    opacity: 0.6;
 
     &:nth-child(2) {
       bottom: 2rem;
+      opacity: 1;
     }
 
     & div {
@@ -140,7 +163,7 @@ export default {
       padding: 0.8rem;
 
       & h2 {
-        color: rgb(241 215 219);
+        color: rgb(200 244 90);
         font-size: 15px;
         font-weight: bold;
         text-align: center;
@@ -149,6 +172,8 @@ export default {
 
     & p {
       background: rgb(185 185 185 / 32%);
+      color: rgb(212 255 239);
+      font-size: 15px;
       padding: 0.8rem;
       font-size: 12px;
     }
@@ -161,8 +186,7 @@ export default {
     
     .offer-box {
       &:nth-child(1) {
-        left: 70px;
-        opacity: 0.6;
+        left: 80px;
       }
       &:nth-child(2) {
         bottom: 1rem;
@@ -170,8 +194,7 @@ export default {
         z-index: 10;
       }
       &:nth-child(3) {
-        left: -70px;
-        opacity: 0.6;
+        left: -80px;
       }
     }
   }

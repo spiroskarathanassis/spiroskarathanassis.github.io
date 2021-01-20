@@ -28,4 +28,10 @@ export default {
     width: 100vw;
     height: 100vh;
   }
+  
+  @media screen and (max-height: 700px) {
+    section {
+      height: 200vh;
+    }
+  }
 </style>

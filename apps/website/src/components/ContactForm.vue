@@ -1,11 +1,12 @@
-<template>
+// <template>
   <div class="contact-container">
     <div class="contact-title">Contact</div>
-    <form action="" method="post">
+    <form action="" method="post" ref="form">
       <div class="row">
         <input type="text" placeholder="First Name">
         <input type="text" placeholder="Last Name">
       </div>
+      <input v-show="isSubject" type="text" placeholder="Subject" ref="subject">
       <input type="email" id="email" placeholder="Email">
       <textarea placeholder="Message"></textarea>
       <button type="submit">Send</button>
@@ -14,14 +15,38 @@
 </template>
 
 <script>
+import { onBeforeUpdate, ref } from 'vue';
+
 export default {
-  name: 'ContactForm'
+  name: 'ContactForm',
+  props: ['boxName'],
+  setup (props) {
+    const form = ref(null);
+    const isSubject = ref(false);
+    const subject = ref('');
+    
+    onBeforeUpdate(() => {
+      isSubject.value = setSubject();
+    })
+
+    const setSubject = () => {
+      const hasSubject = ['job', 'project'].includes(props.boxName);
+      form.value.style.gridTemplateRows = hasSubject ? '1fr 1fr 1fr 2fr 1fr' : '';
+      subject.value['value'] = hasSubject ? props.boxName + ' request' : '';
+
+      return hasSubject;
+    }
+
+    return {
+      form,
+      isSubject,
+      subject
+    };
+  }
 }
 </script>
 
 <style lang="scss" scoped>
-  $borderColor: rgb(146 146 146);
-
   .contact-container {
     grid-row-start: 3;
     grid-column-start: 3;
@@ -41,12 +66,10 @@ export default {
       display: grid;
       grid-template-rows: 1fr 1fr 2fr 1fr;
 
-
       & .row {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 8px;
-        
       }
 
       @media screen and (max-width: 400px) {
@@ -65,16 +88,16 @@ export default {
         color: rgb(252 166 166);
         height: 50%;
         
-        &:hover,
+        // &:hover,
         &:focus {
           outline: none;
-          border-color: $borderColor;
+          border-color: rgba(255, 255, 0, 0.8);
         }
       }
 
       & textarea {
         height: 100%;
-        border: 1px solid $borderColor;
+        border: 1px solid rgb(146 146 146);
       }
 
       & button {
