@@ -1,6 +1,7 @@
 <template>
   <div class="control-buttons">
-    <ul>
+    <h2 v-if="!isHomePage && isMobile" @click="isMenuOpened = !isMenuOpened">Menu</h2>
+    <ul v-show="isMenuOpened || !isMobile || isHomePage">
       <li v-for="(route, index) in routes" :key="index">
         <router-link :to="route.to">{{ route.text }}</router-link>
       </li>
@@ -9,7 +10,8 @@
 </template>
 
 <script>
-import { onBeforeMount, reactive } from 'vue';
+import { onBeforeMount, reactive, ref } from 'vue';
+import detectMobile from './utils/detectMobile';
 
 const menuElements = {
   home      : 'Home',
@@ -24,14 +26,20 @@ export default {
   props: [ 'isPage' ],
   setup (props) {
     const routes = reactive([]);
+    const isHomePage = ref(false);
+    const isMenuOpened = ref(false);
+    const isMobile = ref(false)
     
     const setRoutes = () => {
       for (const el in menuElements) {
-        if ((props.isPage === 'home' && el === 'home')) continue;
+        if ((props.isPage === 'home' && el === 'home')) {
+          isHomePage.value = true;
+          continue;
+        }
 
         let path = `/${el}`;
         if (el === 'home') path = '/';
-        if (el === props.isPage) path = ''; // not necessary if is current page
+        if (el === props.isPage) continue;
 
         routes.push({
           to: path, 
@@ -40,8 +48,24 @@ export default {
       }
     }
 
-    onBeforeMount(() => setRoutes());
-    return { routes };
+    window.addEventListener('resize', () => detectWidth());
+
+    const detectWidth = () => {
+      isMobile.value = (window.innerWidth < 450) || detectMobile();
+    }
+
+    onBeforeMount(() => {
+      setRoutes();
+      detectWidth();
+    });
+
+    return {
+      routes,
+      isHomePage,
+      isMenuOpened,
+      isMobile,
+      detectWidth
+    };
   }
 }
 </script>
@@ -52,6 +76,7 @@ export default {
   .control-buttons 
     display: flex
     justify-content: center
+    z-index: 10
 
     ul
       margin-top: 1.5rem
@@ -80,5 +105,31 @@ export default {
           
           &.router-link-active
             background: rgb(151, 147, 147)
+            
+  @media screen and (max-width: 450px)
+    .control-buttons
+      display: block
+
+      h2
+        padding: 12px 0
+        text-align: center
+        color: rgba(177, 255, 157, 0.85)
+        cursor: pointer
+
+        &:hover
+          color: rgba(81, 157, 61, 0.85)
+
+      ul
+        flex-direction: column
+        width: 100%
+        align-items: center
+        margin: 0px auto
+      
+        li
+          width: -webkit-fill-available
+          margin: 0
+          
+          a
+            width: 100%
 
 </style>
