@@ -1,7 +1,7 @@
 <template>
   <div class="control-buttons">
     <h2 v-if="!isHomePage && isMobile" @click="isMenuOpened = !isMenuOpened">Menu</h2>
-    <ul v-show="isMenuOpened || !isMobile || isHomePage">
+    <ul v-show="isMenuOpened || !isMobile || isHomePage" :class="{mobileDrop: !isHomePage}">
       <li v-for="(route, index) in routes" :key="index">
         <router-link :to="route.to">{{ route.text }}</router-link>
       </li>
@@ -11,7 +11,7 @@
 
 <script>
 import { onBeforeMount, reactive, ref } from 'vue';
-import detectMobile from './utils/detectMobile';
+import detectMobile from '../utils/detectMobile';
 
 const menuElements = {
   home      : 'Home',
@@ -39,7 +39,7 @@ export default {
 
         let path = `/${el}`;
         if (el === 'home') path = '/';
-        if (el === props.isPage) continue;
+        if (el === props.isPage) path = '#';
 
         routes.push({
           to: path, 
@@ -109,6 +109,7 @@ export default {
   @media screen and (max-width: 450px)
     .control-buttons
       display: block
+      z-index: 100
 
       h2
         padding: 12px 0
@@ -119,6 +120,9 @@ export default {
         &:hover
           color: rgba(81, 157, 61, 0.85)
 
+      .mobileDrop
+        position: absolute
+        
       ul
         flex-direction: column
         width: 100%

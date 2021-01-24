@@ -23,8 +23,8 @@
 import { ref } from 'vue';
 import ContactForm from '../ContactForm.vue';
 import NavigationButtons from '../NavigationButtons.vue';
-import { boxes } from '../constants';
-import detectMobile from '../utils/detectMobile';
+import { boxes } from '../../store/constants';
+import detectMobile from '../../utils/detectMobile.js';
 
 export default {
   name: 'ContactPage',
