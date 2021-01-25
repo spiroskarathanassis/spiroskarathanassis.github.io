@@ -21,7 +21,7 @@ const setGraphDetails = (data, columns) => {
   let preview = {}, descr = {};
 
   //background
-  if (data.background?.split(' ') !== '') {
+  if (data.background && data.background.split(' ') !== '') {
     Reflect.set(styles, 'background', data.background);
     logger.push("Background color is " + data.background);
   }
@@ -55,8 +55,8 @@ const setGraphDetails = (data, columns) => {
   console.table(logger);
  
   for (let col of columns) {
-    if (!(col.size[0] && col.size[1])) {
-      console.log(`Not a given size for column number ${col}`);
+    if (col.size[0] == undefined || col.size[1] == undefined) {
+      console.log(`Not a given size for column number ${col.label}`);
       continue;
     }
 

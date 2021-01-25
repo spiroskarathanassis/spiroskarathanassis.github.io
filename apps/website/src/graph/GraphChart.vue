@@ -20,6 +20,7 @@ export default {
   name: 'GraphChart',
   props: ['projectData'],
   setup (props) {
+    console.log(props.projectData.columns);
     const columns = ref(props.projectData.columns ?? []);
     const styles = ref('');
 

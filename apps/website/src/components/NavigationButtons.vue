@@ -1,5 +1,5 @@
 <template>
-  <div class="control-buttons">
+  <div class="control-buttons" :class="{buttonsArea: !isHomePage && isMobile}">
     <h2 v-if="!isHomePage && isMobile" @click="isMenuOpened = !isMenuOpened">Menu</h2>
     <ul v-show="isMenuOpened || !isMobile || isHomePage" :class="{mobileDrop: !isHomePage}">
       <li v-for="(route, index) in routes" :key="index">
@@ -107,6 +107,9 @@ export default {
             background: rgb(151, 147, 147)
             
   @media screen and (max-width: 450px)
+    .buttonsArea
+      width: 100vw
+
     .control-buttons
       display: block
       z-index: 100

@@ -21,12 +21,17 @@ export default {
     font-size: 14px;
     font-family: 'Noto Sans JP', sans-serif;
   }
+  #website {
+    background-color: rgba(29, 18, 18, 0.96);
+  }
   section {
+    justify-content: center;
+    max-width: 800px;
     display: grid;
     grid-template-rows: 1fr 3fr;
-    background-color: rgba(29, 18, 18, 0.96);
     width: 100vw;
     height: 100vh;
+    margin: 0 auto;
   }
   
   @media screen and (max-height: 700px) {
