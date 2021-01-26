@@ -45,7 +45,7 @@
           </p>
         </div>
         <div class="bio-footer">
-          <div class="resume" onclick="window.open('../../assets/Spiros Karathanassis CV.pdf', '_self')">
+          <div class="resume" onclick="window.open('../../assets/Spiros_Karathanassis_CV.pdf', '_self')">
             Resume &nbsp;<img src="../../assets/images/download.png" width="16" height="14" alt="download">
           </div>
       </div>

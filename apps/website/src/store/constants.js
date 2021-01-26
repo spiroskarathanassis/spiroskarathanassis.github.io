@@ -49,9 +49,9 @@ export const projects = [
   {
     title: 'Extended Quiz Game',
     description: [
-      `It is started as Javascript Quiz Game to learn new technologies. 
-        After some period I realized tha is a useful tool to convert it as a business tool where can be useful. 
-        Convert it to take json data from api and as much flexible can.`,
+      `It's started as Javascript Quiz Game to learn new technologies. 
+        After some period I realized that is a useful tool to convert it as a business tool where can be useful.
+        (Training new employees, interviewing coding questions, etc.)`,
       `Technologies used: Vue CLI with vue3, JS, SCSS, HTML5, JSON, Firebase api`,
     ],
     github: {
@@ -89,7 +89,7 @@ export const projects = [
     },
     {
       label: 'Extra Packages',
-      size: [20, 10]
+      size: [20, 1]
     }],
   },
   {
@@ -148,7 +148,7 @@ export const skills = {
   },
   hard: {
     title: 'Hard Skills',
-    lis: ['design (Adome XD, FIgma)', 'Rest, GraphQl apis', 'Chrome Dev tools'],
+    lis: ['design (Adome XD, FIgma)', 'Rest, GraphQL apis', 'Chrome Dev tools', 'SEO Optimisation'],
   },
   professional: {
     title: 'Professional Skills',
