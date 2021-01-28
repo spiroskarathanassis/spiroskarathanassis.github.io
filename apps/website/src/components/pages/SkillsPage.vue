@@ -14,7 +14,7 @@
       <p>Also, I am still in progress learning, reading and searching about new technologies and better methods of doing things.
       That's why I love programming. <br/>
         I have worked on <span>docker</span> environment and I am still learning to build containers.
-        I have working and debugging experince on <span>React</span> and <span>Vue</span> js frameworks.
+        I have working and debugging experience on <span>React</span> and <span>Vue</span> js frameworks.
         I am currently learning <span>AI</span>.
         I have personal experience building <span>CMS</span> websites.
       </p>
