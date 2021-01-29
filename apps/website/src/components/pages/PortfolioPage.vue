@@ -10,7 +10,7 @@
         <p>
           <span v-for="(p, index) in project.description" :key="index">{{p}}<br/></span>
           <span v-if="project.github">Github repo: 
-            <a style="color: #53e853" :href="project.github.link">{{ project.github.name }}</a>
+            <a style="color: #53e853" :href="project.github.link" target="_blank">{{ project.github.name }}</a>
           </span>
         </p>
       </details>

@@ -45,7 +45,7 @@
           </p>
         </div>
         <div class="bio-footer">
-          <div class="resume" onclick="window.open('../../assets/Spiros_Karathanassis_CV.pdf', '_self')">
+          <div class="resume" onclick="window.open('dist/website/Spiros_Karathanassis_CV.pdf')">
             Resume &nbsp;<img src="../../assets/images/download.png" width="16" height="14" alt="download">
           </div>
       </div>
@@ -139,8 +139,8 @@ export default {
 
       p {
         margin: 6px 0;
-        font-size: 16px;
-        font-family: 'Times New Roman', Times, serif;
+        font-size: 15px;
+        font-family: 'Noto Sans JP', sans-serif;
       }
     }
 

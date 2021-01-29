@@ -1,11 +1,10 @@
 <template>
   <div>
     <header>
-      <h2>Relax, It's time to code</h2>
+      <h3>Relax, It's time to code</h3>
     </header>
     <div class="main-page">
-      <h1>Hi, I am Spiros Karathanassis</h1>
-      <h1>If you search for great developers I am your choice</h1>
+      <h1>Hi, I am Spiros Karathanassis<br/>If you search for great developers I am your choice</h1>
       <h2>Front-End Developer / Software Engineer</h2>
       <div class="location-container">
         <img src="../../assets/images/worldwide.png" alt="location" />
@@ -42,7 +41,7 @@ export default {
     width: 100vw
     height: 35%
   
-    h2
+    h3
       display: flex
       justify-content: flex-end
       align-items: flex-end
@@ -70,6 +69,7 @@ export default {
       font-family: 'Amatic SC'
       font-size: 20px
       letter-spacing: 2px
+      text-align: center
   
     h2
       padding: 2rem 0 0.5rem 0
