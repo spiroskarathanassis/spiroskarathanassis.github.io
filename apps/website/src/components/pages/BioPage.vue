@@ -45,9 +45,7 @@
           </p>
         </div>
         <div class="bio-footer">
-          <div class="resume" onclick="window.open('dist/website/Spiros_Karathanassis_CV.pdf')">
-            Resume &nbsp;<img src="../../assets/images/download.png" width="16" height="14" alt="download">
-          </div>
+          <div class="resume"><a href="dist/website/Spiros_Karathanassis_CV.pdf" target="_blank">Open Resume</a></div>
       </div>
       </div>
     </div>
@@ -159,6 +157,12 @@ export default {
         text-align: center;
         padding: 2px 4px;
         font-weight: bold;
+
+        & > a {
+          color: inherit;
+          text-decoration: none;
+          font-weight: bolder;
+        }
 
         &:hover {
           cursor: pointer;
