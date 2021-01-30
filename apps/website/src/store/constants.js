@@ -51,9 +51,9 @@ export const projects = [
     description: [
       `It's started as Javascript Quiz Game to learn new technologies. 
         After some period I realized that is a useful tool to convert it as a business tool where can be useful.
-        (Training new employees, interviewing coding questions, etc.)`,
-      `Technologies used: Vue CLI with vue3, JS, SCSS, HTML5, JSON, Firebase api`,
+        (Training new employees, interviewing coding questions, etc.)`
     ],
+    technologies: `Vue CLI with vue3, JS, SCSS, HTML5, JSON, Firebase api`,
     github: {
       link: 'https://github.com/spiroskarathanassis/quiz-game',
       name:'quiz-game'
@@ -76,9 +76,9 @@ export const projects = [
     description: [
       `Implementation of catching advertising requests, handle ad bugs on publishers web pages. 
         Reason to this project were that colleagues spend time(hours) to find bugs. 
-        Launch apps like these automate jobs where time can be useful.`,
-      `Technologies used: React, Webpack, JS, SASS, HTML5, JSON, IndexedDB`
-    ],
+        Launch apps like these automate jobs where time can be useful.`
+      ],
+    technologies: `React, Webpack, JS, SASS, HTML5, JSON, IndexedDB`,
     graph: [{
       label: 'Code lines',
       size: [20, 100]
@@ -96,8 +96,8 @@ export const projects = [
     title: 'Football Management System',
     description: [
       `This is an Automated Football game. Game keeps and print informations about teams, players, statistics, goals, etc.`,
-      `Technologies used: Java`
     ],
+    technologies: `Java`,
     github: {
       link: 'https://github.com/spiroskarathanassis/FootballGame',
       name:'football-game'

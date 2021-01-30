@@ -9,6 +9,8 @@
         <summary>{{ project.title }}</summary>
         <p>
           <span v-for="(p, index) in project.description" :key="index">{{p}}<br/></span>
+          <span v-if="project.technologies"
+           style="color: rgb(222 238 144);" >Technologies used: {{ project.technologies }}<br/></span>
           <span v-if="project.github">Github repo: 
             <a style="color: #53e853" :href="project.github.link" target="_blank">{{ project.github.name }}</a>
           </span>
