@@ -70,6 +70,7 @@ export default {
   .chart-preview {
     @include graphTemplate();
     margin-bottom: 0;
+    height: 100px;
 
     li {
       background: salmon; // graph.column.color
