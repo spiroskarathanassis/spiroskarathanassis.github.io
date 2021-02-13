@@ -5,7 +5,7 @@
       <graph-chart v-show="hasGraph" :projectData="graph" :key="componentKey"></graph-chart>
     </div>
     <div class="project-container">
-      <details v-for="(project, index) of projects" :key="project.title" @click="updateGraph(index)">
+      <details v-for="(project, index) of projects" :key="project.title" @click.prevent="updateGraph(index)" :open="detailsList[index]">
         <summary>{{ project.title }}</summary>
         <p>
           <span v-for="(p, index) in project.description" :key="index">{{p}}<br/></span>
@@ -33,6 +33,7 @@ export default {
     const hasGraph = ref(false);
     const graph = ref('');
     const componentKey = ref(null);
+    const detailsList = ref(Array(projects.length).fill(false));
 
     onBeforeMount(() => graph.value = graphData);
     const isGraph = computed(() => hasGraph.value = true);
@@ -45,6 +46,8 @@ export default {
       componentKey.value = index;
       graph.value.columns = projects[index].graph;
       // console.log(graph);
+
+      detailsList.value = detailsList.value.map((el, detailsIndex) => detailsIndex === index ? true : false);
     }
 
     return {
@@ -53,6 +56,7 @@ export default {
       projects: projects,
       updateGraph,
       componentKey,
+      detailsList
     }
   }
 }
@@ -62,11 +66,11 @@ export default {
   $salmon-color: salmon
 
   section 
-    grid-template-rows: 1fr 2fr 4fr
+    grid-template-rows: 0.5fr 3fr 12fr
 
   .graph-preview
     height: fit-content
-    margin: 0 2rem
+    margin: 2rem
 
   .project-container
     margin: 0 1rem

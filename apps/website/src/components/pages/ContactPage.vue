@@ -119,9 +119,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  section {
-    grid-template-rows: 1fr 4fr;
-  }
+  // section {
+  //   grid-template-rows: 10% 4fr;
+  // }
 
   .main-container {
     display: flex;

@@ -56,9 +56,9 @@ export default {
     background-color: rgba(29, 18, 18, 0.96)
     color: rgb(241, 215, 219)
     position: absolute
-    bottom: 0
+    top: 35%
     width: 100vw
-    height: 65%
+    min-height: 65%
     padding: 2rem
     display: flex
     justify-content: flex-start

@@ -68,11 +68,13 @@ export default {
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    margin: 2rem auto;
   }
 
   .notes-container {
     max-width: 800px;
     max-height: 55vh;
+    min-height: 300px;
     margin: 0 2rem;
 
     display: flex;

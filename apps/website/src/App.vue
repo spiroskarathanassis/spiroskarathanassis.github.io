@@ -28,15 +28,9 @@ export default {
     justify-content: center;
     max-width: 800px;
     display: grid;
-    grid-template-rows: 1fr 3fr;
+    grid-template-rows: 0.5fr 4fr;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0 auto;
-  }
-  
-  @media screen and (max-height: 700px) {
-    section {
-      height: 200vh;
-    }
   }
 </style>

@@ -37,7 +37,7 @@ export default {
 
 <style lang="scss" scoped>
   section {
-    grid-template-rows: 1fr 2fr 3fr;
+    grid-template-rows: 0.5fr 4fr 3fr;
   }
 
   .skills-container {
@@ -45,7 +45,7 @@ export default {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-gap: 16px;
-    margin: auto 2rem;
+    margin: 1rem 2rem;
 
     .skill-tab {
       display: grid;
