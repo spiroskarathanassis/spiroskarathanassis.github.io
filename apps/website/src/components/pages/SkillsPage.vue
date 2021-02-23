@@ -45,7 +45,7 @@ export default {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-gap: 16px;
-    margin: 1rem 2rem;
+    margin: auto;
 
     .skill-tab {
       display: grid;
@@ -57,14 +57,16 @@ export default {
       font-weight: bold;
     }
     ul {
-      background: rgb(213 224 186);
+      background: inherit;
       border-radius: 12px;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      padding: 8px;
+      padding: 0 3rem;;
       height: 6.5rem;
+      box-shadow: 4px 4px 0px 0px #524242;
+      color: rgb(191 187 158 / 54%);
 
       li {
         font-family: 'Noto Sans JP';
@@ -81,10 +83,9 @@ export default {
     }
   }
 
-
   .extra-infos {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
     margin: 0 0.5rem;
@@ -94,7 +95,8 @@ export default {
     p {
       margin: 8px 0;
       box-shadow: 0px 0px 12px 6px rgb(0 0 0 / 35%);
-      padding: 12px; 
+      padding: 12px;
+      border-radius: 6px;
     }
 
     span {
