@@ -12,11 +12,14 @@
     </div>
     <div class="extra-infos">
       <p>Also, I am still in progress learning, reading and searching about new technologies and better methods of doing things.
-      That's why I love programming. <br/>
-        I have worked on <span>docker</span> environment and I am still learning to build containers.
-        I have working and debugging experience on <span>React</span> and <span>Vue</span> js frameworks.
-        I am currently learning <span>AI</span>.
-        I have personal experience building <span>CMS</span> websites.
+        That's why I love programming.
+      </p>
+      <p>
+        <span>I have working and debugging experience on React.js and Vue.js frameworks.</span>
+        <span>I have worked on docker environment and I am still learning to build containers.</span>
+        <span>I am currently learning AI as I build an application based on AI algorithms and NLP.</span>
+        <span>I am also currently learning and programming some Flutter applications.</span>
+        <!-- I have personal experience building <span>CMS</span> websites. -->
       </p>
     </div>
   </section>
@@ -100,7 +103,8 @@ export default {
     }
 
     span {
-      color: rgb(138 236 138);
+      margin-top: 6px;
+      display: inline-block;
     }
   }
 </style>

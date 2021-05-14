@@ -45,7 +45,7 @@
           </p>
         </div>
         <div class="bio-footer">
-          <div class="resume"><a href="dist/website/Spiros_Karathanassis_CV.pdf" target="_blank">Open Resume</a></div>
+          <div class="resume"><a href="dist/website/Spiros_Karathanassis_CV.pdf" target="_blank">Resume</a></div>
       </div>
       </div>
     </div>
@@ -63,6 +63,7 @@ export default {
 
 <style lang="scss" scoped>
   $bioColor: rgb(53 54 54);
+  $resumeColor: rgb(212 255 239);
 
   .main-container {
     display: flex;
@@ -153,22 +154,25 @@ export default {
       padding: 6px 18px;
 
       & > .resume {
-        background: salmon;
+        background: $bioColor;
+        border: 1px solid $resumeColor;
         border-radius: 2px;
-        color: rgb(0 0 0 / 90%);
         text-align: center;
-        padding: 2px 4px;
-        font-weight: bold;
+        padding: 4px 12px;
 
         & > a {
-          color: inherit;
+          color: $resumeColor;
           text-decoration: none;
-          font-weight: bolder;
+          font-weight: bold;
         }
 
         &:hover {
           cursor: pointer;
-          background: rgb(250 128 114 / 63%);
+          background: $resumeColor;
+          
+          & > a {
+            color: $bioColor;
+          }
         }
       }
     }

@@ -4,8 +4,8 @@
       <h3>Relax, It's time to code</h3>
     </header>
     <div class="main-page">
-      <h1>Hi, I am Spiros Karathanassis<br/>If you search for great developers I am your choice</h1>
-      <h2>Front-End Developer / Software Engineer</h2>
+      <h2>Hi, I am Spiros Karathanassis<br/>If you search for great developers I am your choice</h2>
+      <h1>Full Stack Developer</h1>
       <div class="location-container">
         <img src="../../assets/images/worldwide.png" alt="location" />
         <a href="https://www.google.com/maps/place/Patras">Patras, Greece</a>
@@ -65,14 +65,16 @@ export default {
     align-items: center
     flex-direction: column
   
-    h1
+    h2
       font-family: 'Amatic SC'
       font-size: 20px
       letter-spacing: 2px
       text-align: center
   
-    h2
+    h1
       padding: 2rem 0 0.5rem 0
+      font-size: 21px
+      text-align: center
   
     .location-container
       background-color: $toggle-color
@@ -105,7 +107,7 @@ export default {
         background-color: $salmon-color
         border: 2px solid $salmon-color
         color: $toggle-color
-        padding: 0.2rem 10rem
+        padding: 0.3rem 10rem
         border-radius: 20px
         cursor: pointer
         box-shadow: 0px 0px 10px 1px rgb(175 68 68 / 90%)

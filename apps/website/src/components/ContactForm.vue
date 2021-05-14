@@ -56,6 +56,7 @@ export default {
 
     & > .contact-title {
       padding: 3px 0px;
+      border-radius: 3px;
       text-align: center;
       font-size: 13px;
       color: rgb(246 253 248);
@@ -98,11 +99,13 @@ export default {
       & textarea {
         height: 100%;
         border: 1px solid rgb(146 146 146);
+        border-radius: 5px;
       }
 
       & button {
-        background: rgba(17 16 11 / 0.8);
+        background: rgb(150 149 162 / 46%);
         border: none;
+        border-radius: 3px;
         color: #929292;
         font-size: 13px;
         outline: none;
@@ -111,7 +114,7 @@ export default {
         cursor: pointer;
         
         &:hover {
-          background: rgb(17 16 11);
+          background: rgb(150 149 162 / 80%);
           color: rgb(255 255 255);
         }
       }

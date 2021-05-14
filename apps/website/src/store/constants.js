@@ -78,7 +78,7 @@ export const projects = [
         Reason to this project were that colleagues spend time(hours) to find bugs. 
         Launch apps like these automate jobs where time can be useful.`
       ],
-    technologies: `React, Webpack, JS, SASS, HTML5, JSON, IndexedDB`,
+    technologies: `React, Webpack, JS, SASS, HTML5, JSON`,
     graph: [{
       label: 'Code lines',
       size: [20, 100]
