@@ -1,16 +1,19 @@
 <template>
-  <div class="control-buttons" :class="{buttonsArea: !isHomePage && isMobile}">
-    <h2 v-if="!isHomePage && isMobile" @click="isMenuOpened = !isMenuOpened">Menu</h2>
-    <ul v-show="isMenuOpened || !isMobile || isHomePage" :class="{mobileDrop: !isHomePage}">
-      <li v-for="(route, index) in routes" :key="index">
-        <router-link :to="route.to">{{ route.text }}</router-link>
-      </li>
-    </ul>
+  <div id="navbar" :class="{'nav-container': !isHomePage && isMenuOpened, 'nav-opened': isNavbarActive && isMenuOpened}"
+    @click="handleFocus">
+    <div class="control-buttons" :class="{buttonsArea: !isHomePage && isMobile}">
+      <h2 v-if="!isHomePage" @click="isMenuOpened = !isMenuOpened; startMenuClosed;">Menu</h2>
+      <ul v-show="isMenuOpened || isHomePage" :class="{mobileDrop: !isHomePage && !isNavbarActive}">
+        <li v-for="(route, index) in routes" :key="index">
+          <router-link :to="route.to">{{ route.text }}</router-link>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
 <script>
-import { onBeforeMount, reactive, ref } from 'vue';
+import { computed, onBeforeMount, reactive, ref } from 'vue';
 import detectMobile from '../utils/detectMobile';
 
 const menuElements = {
@@ -27,7 +30,8 @@ export default {
   setup (props) {
     const routes = reactive([]);
     const isHomePage = ref(false);
-    const isMenuOpened = ref(false);
+    const isNavbarActive = ref(false)
+    const isMenuOpened = ref(true);
     const isMobile = ref(false)
     
     const setRoutes = () => {
@@ -50,9 +54,19 @@ export default {
 
     window.addEventListener('resize', () => detectWidth());
 
+    const handleFocus = e => {
+      if (isNavbarActive.value && isMenuOpened.value && e.target.id == 'navbar') {
+        isMenuOpened.value = false
+      }
+    }
     const detectWidth = () => {
       isMobile.value = (window.innerWidth < 450) || detectMobile();
     }
+    const startMenuClosed = computed(() => {
+      console.log('hi');
+      isMenuOpened.value = true;
+      isNavbarActive.value = true;
+    });
 
     onBeforeMount(() => {
       setRoutes();
@@ -63,8 +77,11 @@ export default {
       routes,
       isHomePage,
       isMenuOpened,
+      isNavbarActive,
       isMobile,
-      detectWidth
+      detectWidth,
+      startMenuClosed,
+      handleFocus
     };
   }
 }
@@ -77,6 +94,9 @@ export default {
     display: flex
     justify-content: center
     z-index: 10
+
+    h2
+      display: none
 
     ul
       margin-top: 1.5rem
@@ -91,40 +111,46 @@ export default {
         
         a
           display: block
-          background: rgb(60, 56, 56)
           width: 5.5rem
           border-radius: 4px
           padding: 0.5rem
           text-align: center
           font-size: 0.8em
-          color: whitesmoke
+          color: rgb(242 239 255)
           text-decoration: none
 
           &:hover
             background: rgba(49, 46, 46, 0.88)
           
           &.router-link-active
-            background: rgb(151, 147, 147)
+            color: #c8f45a
             
   @media screen and (max-width: 450px)
-    .buttonsArea
+    .nav-container
       width: 100vw
+      position: absolute
+      z-index: 100
+
+    .nav-opened
+      height: 100%
+      background: rgb(0 0 0 / 79%)
+
+    .buttonsArea
+      width: 100%
 
     .control-buttons
       display: block
-      z-index: 100
+      background: rgba(94, 96, 96, 0.9)
 
       h2
+        display: block
         padding: 12px 0
         text-align: center
         color: rgba(177, 255, 157, 0.85)
         cursor: pointer
 
-        &:hover
-          color: rgba(81, 157, 61, 0.85)
-
       .mobileDrop
-        position: absolute
+        display: none
         
       ul
         flex-direction: column

@@ -1,4 +1,4 @@
-// <template>
+<template>
   <div class="contact-container">
     <div class="contact-title">Contact</div>
     <form action="" method="post" ref="form">

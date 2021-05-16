@@ -33,4 +33,10 @@ export default {
     min-height: 100vh;
     margin: 0 auto;
   }
+
+  @media screen and (max-width: 450px) {
+    .main-container, .skills-container, .graph-preview {
+      margin-top: 4rem !important;
+    }
+  }
 </style>
